@@ -1,1 +1,36 @@
 @import '~bootstrap/scss/bootstrap';
+
+$black: #aaa;
+$blue: #4d6eb0;
+$green: #4eb15e;
+$purple: #b04da0;
+
+body {
+  background-color: $blue;
+}
+
+h1 {
+  padding-top: 40px;
+}
+
+.box {
+  background-color: $green;
+  border: 1px solid $black;
+  color: $purple;
+  font-size: 40px;
+  height: 100px;
+  text-align: center;
+  width: 100px;
+}
+
+.player-1 {
+  position: center;
+}
+
+.player-2 {
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+}
