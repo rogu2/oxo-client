@@ -1,7 +1,17 @@
 'use strict'
-//require get form fields
-//require api.js
-//require ui.js
+
+// if user is logged in, hide login/signup, show signout and change password
+
+const getFormFields = require('../../../lib/get-form-fields.js')
+const api = require('./api.js')
+const ui = require('./ui.js')
+
+// const addHandlers = () => {
+//   $('#sign-up-form').on('submit', authEvents.onSignUp)
+//   $('#sign-in-form').on('submit', authEvents.onSignIn)
+//   $('#sign-out-button').on('click', authEvents.onSignOut)
+//   $('#change-password-form').on('submit', authEvents.onChangePassword)
+// }
 
 const onSignUp = (event) => {
   event.preventDefault()
@@ -58,4 +68,5 @@ module.exports = {
   onSignIn,
   onSignOut,
   onChangePassword
+  // addHandlers
 }
