@@ -11,7 +11,7 @@
 //
 // return x or y to gameboard in corresponding array-string location
 //
-//
+// Set win conditions for array value
 
 const authEvents = require('./auth/events.js')
 const gameEvents = require('./game/events.js')
@@ -26,5 +26,6 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
 
   // gameEvents -> probably to change
-  $('#game-table').on('click', gameEvents.onBoxClick)
+  $('.box').on('click', gameEvents.onBoxClick)
+  $('#restart-button').on('click', gameEvents.onNewGame)
 })
