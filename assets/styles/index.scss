@@ -1,3 +1,11 @@
+/*
+Add custom fonts,
+link font file, colors file, variables file
+Add images
+Consider animations
+Improve basic styling
+*/
+
 @import '~bootstrap/scss/bootstrap';
 
 $black: #aaa;
@@ -7,6 +15,15 @@ $purple: #b04da0;
 
 body {
   background-color: $blue;
+}
+
+footer {
+  border: 1px solid $black;
+}
+
+form {
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 h1 {
@@ -23,11 +40,17 @@ h1 {
   width: 100px;
 }
 
-.player-1 {
-  position: center;
+.buttonCenter {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
 }
 
-.player-2 {
+.row {
+  align-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .scores {

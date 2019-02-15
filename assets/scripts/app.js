@@ -1,13 +1,30 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
+// psuedo-code: make array of 9 strings (CHECK)
+// assign var to position in array
+//
+// jquery for updating #box[i] corresponds to
+// array game [i]
+//
+// if number of strings in array is even or 0
+// player X turn, else player Y turn
+//
+// return x or y to gameboard in corresponding array-string location
+//
+//
 
-// use require without a reference to ensure a file is bundled
-// require('./example')
-
-// require event handlers from auth and game
+const authEvents = require('./auth/events.js')
+const gameEvents = require('./game/events.js')
 
 $(() => {
-  // your JS code goes here
+  // authEvents.addHandlers()
+  // gameEvents.addHandlers()
+  // authEvents
+  $('#sign-up-form').on('submit', authEvents.onSignUp)
+  $('#sign-in-form').on('submit', authEvents.onSignIn)
+  $('#sign-out-button').on('click', authEvents.onSignOut)
+  $('#change-password-form').on('submit', authEvents.onChangePassword)
+
+  // gameEvents -> probably to change
+  $('#game-table').on('click', gameEvents.onBoxClick)
 })
