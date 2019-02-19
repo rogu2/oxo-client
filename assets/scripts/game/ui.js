@@ -2,17 +2,26 @@
 
 const store = require('../store.js')
 
-const onBoxClick = (event) => {
-  event.preventDefault()
-
-  const box = event.target
-
-  $('.box').on('click', function () {
-    console.log('box clicked!')
-  })
+const showGamesSuccess = () => {
+  $('#user-feedback').text(store.player)
 }
+
+const newGameSuccess = () => {
+  $('#user-feedback').text('New game!')
+  store.cells = null
+  $('.box').empty()
+}
+
+const failure = () => {
+  $('#user-feedback').text('Something went wrong, please try again')
+  $('form').trigger('reset')
+  store.user = null
+}
+
 // if user is not logged in, hide #game-table
 module.exports = {
   store,
-  onBoxClick
+  showGamesSuccess,
+  newGameSuccess,
+  failure
 }
