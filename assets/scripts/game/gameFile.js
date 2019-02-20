@@ -2,7 +2,7 @@
 const store = require('../store.js')
 
 // make gameboard
-const gameboard = ['', '', '', '', '', '', '', '', '']
+let gameboard = ['', '', '', '', '', '', '', '', '']
 
 // create function for taking turns
 let player = 'x'
@@ -20,13 +20,17 @@ const turnCheck = (event) => {
 
 // create function for new board
 let gameOver = false
-const clearBoard = (event) => {
+const clearBoard = () => {
   gameOver = false
+  store.gameOver = gameOver
+  player = 'x'
+  gameboard = ['', '', '', '', '', '', '', '', '']
+  $('#player-turn').text('')
+  $('#user-feedback').text('')
+  store.gameboard = gameboard
   for (let i = 0; i < gameboard.length; i++) {
     $(`[data-index=${i}]`).empty()
   }
-  player = 'x'
-  store.game = null
 }
 
 // create function for checking game status

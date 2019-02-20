@@ -24,19 +24,23 @@ const gameboard = ['', '', '', '', '', '', '', '', '']
 
 // New game button also invokes gameboard reset
 const onNewGame = () => {
+  gameFile.clearBoard()
   api.newGame()
     .then(ui.newGameSuccess)
     .catch(ui.failure)
-  gameFile.clearBoard()
 }
 
 // update game with user moves,
 // check turns,
 // check win condition
 const onUpdateGame = (event) => {
+  console.log('onupdategame')
+  console.log('event', event)
   const move = event.target.id
   const score = event.target
-  if ($(event.target).text()) { return }
+  if ($(event.target).text()) {
+    return $('#user-feedback').text('Please select a different square')
+  }
   if (store.gameOver) { return }
   api.updateGame(move)
     .then(gameFile.turnCheck)
