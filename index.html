@@ -19,7 +19,7 @@
     <div>Sign Up</div>
     <div>Sign Out</div>
   </nav> -->
-  <form id="sign-up-form" class="">
+  <form id="sign-up-form">
     <p>Sign Up</p>
     <input name="credentials[email]" type="text" placeholder="email">
     <input name="credentials[password]" type="password" placeholder="password">
@@ -34,26 +34,31 @@
     <input type="submit">
   </form>
 
-  <h1>Olympic Quality Tic Tac Toe</h1>
+  <h1>OXO</h1>
 
   <p id="user-feedback"></p>
+  <p id="player-turn"></p>
 
-  <section id="game-table" class="container">
-    <div class="row">
-      <div id="box0" class="box col-sm-4"></div>
-      <div id="box1" class="box col-sm-4"></div>
-      <div id="box2" class="box col-sm-4"></div>
-      <div id="box3" class="box col-sm-4"></div>
-      <div id="box4" class="box col-sm-4"></div>
-      <div id="box5" class="box col-sm-4"></div>
-      <div id="box6" class="box col-sm-4"></div>
-      <div id="box7" class="box col-sm-4"></div>
-      <div id="box8" class="box col-sm-4"></div>
+  <section id="game-table" class="embed-responsive embed-responsive-1by1 gamearea">
+    <div class="embed-responsive-item gameboard">
+      <div id="box0" data-index="0" class="box col-sm-4"></div>
+      <div id="box1" data-index="1" class="box col-sm-4"></div>
+      <div id="box2" data-index="2" class="box col-sm-4"></div>
+      <div id="box3" data-index="3" class="box col-sm-4"></div>
+      <div id="box4" data-index="4" class="box col-sm-4"></div>
+      <div id="box5" data-index="5" class="box col-sm-4"></div>
+      <div id="box6" data-index="6" class="box col-sm-4"></div>
+      <div id="box7" data-index="7" class="box col-sm-4"></div>
+      <div id="box8" data-index="8" class="box col-sm-4"></div>
     </div>
   </section>
   <div class="buttonCenter">
     <button id="restart-button">New Game</button>
   </div>
+  <div class="buttonCenter">
+    <button id="show-games-button">Show Games</button>
+  </div>
+
   <div class="buttonCenter">
     <button id="sign-out-button">Sign Out</button>
   </div>
@@ -64,7 +69,7 @@
     <input type="submit">
   </form>
   <footer>
-    <p>Email compliments to rguempel@gmail.com<br>
+    <p>Email compliments to <a target="blank" href="mailto:rguempel@gmail.com">rguempel@gmail.com</a><br>
       All complaints must be submitted in writing.</p>
   </footer>
 </body>

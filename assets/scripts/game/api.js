@@ -32,10 +32,10 @@ const updateGame = (index, value, over) => {
     data: {
       game: {
         cell: {
-          index: `${index}`,
-          value: `${value}`
+          index: index,
+          value: value
         },
-        over: `${over}`
+        over: over
       }
     }
   })
