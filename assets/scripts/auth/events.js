@@ -12,6 +12,12 @@ const ui = require('./ui.js')
 //   $('#sign-out-button').on('click', authEvents.onSignOut)
 //   $('#change-password-form').on('submit', authEvents.onChangePassword)
 // }
+const addHandlers = () => {
+  $('#sign-up-form').on('submit', onSignUp)
+  $('#sign-in-form').on('submit', onSignIn)
+  $('#sign-out-button').on('click', onSignOut)
+  $('#change-password-form').on('submit', onChangePassword)
+}
 
 const onSignUp = (event) => {
   event.preventDefault()
@@ -52,7 +58,7 @@ const onChangePassword = (event) => {
 
   api.changePassword(formData)
     .then(ui.changePasswordSuccess)
-    .catch(ui.failure)
+    .catch(ui.changePasswordFailure)
 }
 
 const onSignOut = (event) => {
@@ -67,6 +73,6 @@ module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onChangePassword
-  // addHandlers
+  onChangePassword,
+  addHandlers
 }

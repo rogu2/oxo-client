@@ -10,7 +10,6 @@ const signUpSuccess = () => {
 const signInSuccess = (responseData) => {
   $('#user-feedback').text('Successfully signed in. Welcome back!')
   store.user = responseData.user
-  $('#game-table').show()
   $('#change-password-form').show()
   $('#sign-out-button').show()
   $('#restart-button').show()
@@ -36,6 +35,11 @@ const changePasswordSuccess = () => {
   $('#user-feedback').text('Password successfully updated')
 }
 
+const changePasswordFailure = () => {
+  $('#user-feedback').text('Password did not update, please try again')
+  $('form').trigger('reset')
+}
+
 const failure = () => {
   $('#user-feedback').text('Something went wrong, please try again')
   $('form').trigger('reset')
@@ -47,5 +51,6 @@ module.exports = {
   signInSuccess,
   signOutSuccess,
   changePasswordSuccess,
+  changePasswordFailure,
   failure
 }
