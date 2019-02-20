@@ -14,7 +14,7 @@ const newGameSuccess = () => {
 
 const showGamesSuccess = (response) => {
   store.games = response.games
-  $('#show-games').text(`You've played ${response.games.length} many games`)
+  $('#show-games').text(`You've played ${response.games.length} games`)
   console.log('Number of games', response.games.length)
 }
 
