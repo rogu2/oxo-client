@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store.js')
+const api = require('./api.js')
 
 const newGameSuccess = () => {
   $('#user-feedback').text('New game!')
@@ -9,8 +10,10 @@ const newGameSuccess = () => {
   $('#game-table').show()
 }
 
-const showGamesSuccess = () => {
-  $('#user-feedback').text(store.player)
+const showGamesSuccess = (response) => {
+  store.games = response.games
+  $('#show-games').text(`You've played ${response.games.length} many games`)
+  console.log('Number of games', response.games.length)
 }
 
 const updateGameSuccess = () => {
@@ -41,5 +44,6 @@ module.exports = {
   updateGameSuccess,
   updateGameFailure,
   failure,
-  noClick
+  noClick,
+  api
 }
