@@ -5,26 +5,39 @@ Add images
 Consider animations
 Improve basic styling
 */
-
 @import '~bootstrap/scss/bootstrap';
 
+// Variables //
 $black: #aaa;
-$blue: #4d6eb0;
-$green: #4eb15e;
+$board-background: #4d6eb0;
+$green: #7fcc7f;
 $purple: #b04da0;
 
+
+// Styles //
 body {
-  background-color: $blue;
+  align-items: center;
+  background-color: $board-background;
+  // display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+input {
+  border-radius: 25px;
+  padding-bottom: 2px;
 }
 
 footer {
   border: 1px solid $black;
 }
 
-form {
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
+
+// form {
+//   padding-bottom: 10px;
+//   padding-left: 10px;
+//   width: 300px;
+// }
 
 h1 {
   padding-top: 40px;
@@ -32,12 +45,13 @@ h1 {
 
 .box {
   background-color: $green;
-  border: 1px solid $black;
+  // border: 1px solid $black;
   color: $purple;
   font-size: 40px;
   height: 100px;
   text-align: center;
-  width: 100px;
+  user-select: none;
+  // width: 100px;
 }
 
 .buttonCenter {
@@ -45,6 +59,39 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 30px;
+}
+
+.gamearea {
+  margin: auto;
+  max-height: 90vh;
+  max-width: 90vh;
+  width: 90%;
+}
+
+.gameboard {
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+
+  > .box {
+    align-items: center;
+    // background-color: white;
+    border-bottom: 1px solid;
+    border-radius: .5px;
+    border-right: 1px solid;
+    display: flex;
+    font-size: 12vh;
+    justify-content: center;
+    min-height: calc(100% / 3);
+
+    &:nth-child(3n) {
+      border-right: 0;
+    }
+
+    &:nth-last-child(-1n + 3) {
+      border-bottom: 0;
+    }
+  }
 }
 
 .row {
