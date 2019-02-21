@@ -24,11 +24,7 @@ const showGames = () => {
 
 const updateGame = (index, value, over) => {
   return $.ajax({
-<<<<<<< HEAD
-    url: config.apiUrl + '/games/' + store.user.id,
-=======
     url: config.apiUrl + `/games/${store.user.id}`,
->>>>>>> update-game-api
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
