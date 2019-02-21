@@ -23,7 +23,7 @@ const showGames = () => {
 }
 
 const updateGame = (index, value, over) => {
-  console.log('store user id', store.user.id)
+  // console.log('store user id', store.user.id)
   return $.ajax({
     url: config.apiUrl + `/games/${store.game.id}`,
     method: 'PATCH',

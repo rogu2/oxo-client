@@ -6,7 +6,10 @@ const api = require('./api.js')
 
 const newGameSuccess = (response) => {
   $('#user-feedback').text('New game!')
-  store.game.id = response.game.id
+  store.game = response.game
+  console.log(response.game)
+  console.log(store)
+  console.log(response)
   $('.box').text('')
   $('#game-table').show()
   $('#player-turn').text('')
@@ -31,7 +34,7 @@ const updateGameFailure = () => {
 const failure = () => {
   $('#user-feedback').text('Something went wrong, please try again')
   $('form').trigger('reset')
-  store.user = null
+  // store.user = null
 }
 
 const noClick = () => {
