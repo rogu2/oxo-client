@@ -4,9 +4,9 @@ const store = require('../store.js')
 const api = require('./api.js')
 // const gameFile = require('./gameFile.js')
 
-const newGameSuccess = () => {
+const newGameSuccess = (response) => {
   $('#user-feedback').text('New game!')
-  // store.user = response.user
+  store.game.id = response.game.id
   $('.box').text('')
   $('#game-table').show()
   $('#player-turn').text('')
