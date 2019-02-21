@@ -22,7 +22,6 @@ const signIn = (formData) => {
 }
 
 const signOut = () => {
-  console.log('signout successful')
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',

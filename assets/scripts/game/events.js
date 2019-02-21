@@ -34,8 +34,6 @@ const onNewGame = () => {
 // check turns,
 // check win condition
 const onUpdateGame = (event) => {
-  console.log('onupdategame')
-  console.log('event', event)
   const move = event.target.id
   const score = event.target
   if ($(event.target).text()) {
@@ -64,8 +62,6 @@ const onUpdateGame = (event) => {
   gameboard[7] = $(`[data-index=7]`).text()
   gameboard[8] = $(`[data-index=8]`).text()
   store.gameboard = gameboard
-  console.log('store', store)
-  console.log(gameboard)
 }
 
 const onShowGames = () => {

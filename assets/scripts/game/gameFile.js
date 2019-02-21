@@ -33,17 +33,6 @@ const clearBoard = () => {
   }
 }
 
-// create function for checking game status
-// if game is not over AND board has empty spaces,
-// clear user-feedback and insert player value
-// if game is over, check which player won or played last
-// const gameStatus = (turn) => {
-//   if (gameOver === false && gameboard[turn] === '') {
-//     $('#user-feedback').text('')
-//   } $('#player-turn').text('Turn: Player X')
-//   console.log('game status', gameStatus)
-// }
-
 const winCheck = () => {
   // Make DRY in future version
   const gameboard = store.gameboard
@@ -83,10 +72,7 @@ const winCheck = () => {
     gameOver = true
   }
   // $('#user-feedback').text('Player ' + store.player + ' just went')
-  console.log(gameboard)
-  console.log(store.gameboard)
   store.gameOver = gameOver
-  return console.log(`Status of Game: ${gameOver}`)
 }
 
 // FUTURE VERSION //
@@ -106,7 +92,6 @@ const winCheck = () => {
 // function to check if some of winCheck is true, return player wins
 // const gameOver
 // if (winCheck.some(true) {
-//   console.log('game over', gameOver)
 // } else {
 //   gameOver = false
 //   }

@@ -7,9 +7,6 @@ const api = require('./api.js')
 const newGameSuccess = (response) => {
   $('#user-feedback').text('New game!')
   store.game = response.game
-  console.log(response.game)
-  console.log(store)
-  console.log(response)
   $('.box').text('')
   $('#game-table').show()
   $('#player-turn').text('')
@@ -18,16 +15,13 @@ const newGameSuccess = (response) => {
 const showGamesSuccess = (response) => {
   store.games = response.games
   $('#show-games').text(`You've played ${response.games.length} games`)
-  console.log('Number of games', response.games.length)
 }
 
 const updateGameSuccess = () => {
-  console.log('update game success', updateGameSuccess)
-  // $('#user-feedback').text('game successfully updated')
+  $('#user-feedback').text('Turn played!')
 }
 
 const updateGameFailure = () => {
-  console.log('game failed to update')
   $('#user-feedback').text('Oops! Looks like that move failed')
 }
 
@@ -37,9 +31,9 @@ const failure = () => {
   // store.user = null
 }
 
-const noClick = () => {
-  $('#user-feedback').text('That spot has already been taken')
-}
+// const noClick = () => {
+//   $('#user-feedback').text('That spot has already been taken')
+// }
 
 // if user is not logged in, hide #game-table
 module.exports = {
@@ -49,6 +43,6 @@ module.exports = {
   updateGameSuccess,
   updateGameFailure,
   failure,
-  noClick,
+  // noClick,
   api
 }
