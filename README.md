@@ -52,24 +52,24 @@ Remaining goals:
 USER STORIES
 As a tic-tac-to user I would like to be able to:
 
-Sign Up using email, password, and password confirmation.
-Log In using email and password.
-Log Out on a button click.
-Change Password by already being logged in, and requesting old password and new password.
-Store Password.
-Select a tic tac toe X or O symbol.
-Know if I have won, lost, tied
-Select a box and have it correspond to my designated symbol
-Trade turns with my opponent.
-Know who's turn it is.
-Receive feedback when clicking at start/end of each turn.
-EDIT: X or O in box is sufficient, more than this is probably stretch
-Hide board when not signed in
-Be presented with a fresh board following game completion
-At minimum review total number of games played.
-Stretch: display total wins, losses and ties and streaks.
-Stretch: Load a game background photo that appears as the game is played.
-Stretch: Select theme within UI
-Stretch: See animation with box selections
+- Sign Up using email, password, and password confirmation.
+- Log In using email and password.
+- Log Out on a button click.
+- Change Password by already being logged in, and requesting old password and new password.
+- Store Password.
+- Select a tic tac toe X or O symbol.
+- Know if I have won, lost, tied
+- Select a box and have it correspond to my designated symbol
+- Trade turns with my opponent.
+- Know who's turn it is.
+- Receive feedback when clicking at start/end of each turn.
+- EDIT: X or O in box is sufficient, more than this is probably stretch
+- Hide board when not signed in
+- Be presented with a fresh board following game completion
+- At minimum review total number of games played.
+- Stretch: display total wins, losses and ties and streaks.
+- Stretch: Load a game background photo that appears as the game is played.
+- Stretch: Select theme within UI
+- Stretch: See animation with box selections
 
 WIREFRAME IMAGE LOCATION: https://imgur.com/gallery/05GiQrO
