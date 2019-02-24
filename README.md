@@ -1,5 +1,5 @@
 <!--USER README MANUAL-->
-##INSTRUCTIONS
+INSTRUCTIONS
 1. To get started, users must create an account using a unique email address a
 password which they enter twice for confirmation.
 2. Users then can log in and bring a friend/enemy to play as a challenger.
@@ -50,7 +50,7 @@ Remaining goals:
 -Make code DRY, javascript is currently inefficient and repetitive.
 
 USER STORIES
-##As a tic-tac-to user I would like to be able to:
+As a tic-tac-to user I would like to be able to:
 
 Sign Up using email, password, and password confirmation.
 Log In using email and password.

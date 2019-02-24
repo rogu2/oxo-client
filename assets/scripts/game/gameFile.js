@@ -12,9 +12,13 @@ const turnCheck = (event) => {
   if (store.player === 'x') {
     $(turn).text('o')
     $('#player-turn').text('Turn: Player O')
+    $('#user-feedback').text('')
+  // } else if (gameboard === ['', '', '', '', '', '', '', '', '']) {
+  //   $(turn).text('x')
   } else {
     $(turn).text('x')
     $('#player-turn').text('Turn: Player X')
+    $('#user-feedback').text('')
   }
 }
 

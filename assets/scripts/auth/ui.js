@@ -20,6 +20,8 @@ const signInSuccess = (responseData) => {
 
 const signOutSuccess = () => {
   $('#user-feedback').text('Successfully logged out')
+  $('#player-turn').text('')
+  $('#show-games').text('')
   $('form').trigger('reset')
   store.user = null
   $('#game-table').hide()

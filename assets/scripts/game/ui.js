@@ -9,7 +9,8 @@ const newGameSuccess = (response) => {
   store.game = response.game
   $('.box').text('')
   $('#game-table').show()
-  $('#player-turn').text('')
+  $('#player-turn').text('Turn: Player X')
+  store.player = response.player
 }
 
 const showGamesSuccess = (response) => {
