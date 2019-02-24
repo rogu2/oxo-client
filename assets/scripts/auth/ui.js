@@ -5,10 +5,12 @@ const store = require('../store.js')
 
 const signUpSuccess = () => {
   $('#user-feedback').text('Player successfully created, please sign in to play')
+  $('form').trigger('reset')
 }
 
 const signInSuccess = (responseData) => {
   $('#user-feedback').text('Successfully signed in. Welcome back!')
+  $('form').trigger('reset')
   store.user = responseData.user
   $('#change-password-form').show()
   $('#sign-out-button').show()
@@ -35,6 +37,7 @@ const signOutSuccess = () => {
 
 const changePasswordSuccess = () => {
   $('#user-feedback').text('Password successfully updated')
+  $('form').trigger('reset')
 }
 
 const changePasswordFailure = () => {
