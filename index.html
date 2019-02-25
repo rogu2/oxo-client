@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <!-- <nav class="navbar fixed-top">
+    <div>Sign In</div>
+    <div>Sign Up</div>
+    <div>Sign Out</div>
+  </nav> -->
+  <form id="sign-up-form">
+    <p>Sign Up</p>
+    <input name="credentials[email]" type="text" placeholder="email">
+    <input name="credentials[password]" type="password" placeholder="password">
+    <input name="credentials[password_confirmation]" type="password" placeholder= "confirm password">
+    <input type="submit">
+  </form>
+
+  <form id="sign-in-form">
+    <p>Sign In</p>
+    <input name="credentials[email]" type="text" placeholder="email">
+    <input name="credentials[password]" type="password" placeholder="password">
+    <input type="submit">
+  </form>
+
+  <h1>Tic-Tac-Toe</h1>
+
+  <p id="user-feedback"></p>
+  <p id="player-turn"></p>
+
+  <section id="game-table" class="embed-responsive embed-responsive-1by1 gamearea">
+    <div class="embed-responsive-item gameboard">
+      <div id="box0" data-index="0" class="box col-sm-4"></div>
+      <div id="box1" data-index="1" class="box col-sm-4"></div>
+      <div id="box2" data-index="2" class="box col-sm-4"></div>
+      <div id="box3" data-index="3" class="box col-sm-4"></div>
+      <div id="box4" data-index="4" class="box col-sm-4"></div>
+      <div id="box5" data-index="5" class="box col-sm-4"></div>
+      <div id="box6" data-index="6" class="box col-sm-4"></div>
+      <div id="box7" data-index="7" class="box col-sm-4"></div>
+      <div id="box8" data-index="8" class="box col-sm-4"></div>
+    </div>
+  </section>
+  <div class="buttonCenter">
+    <button id="restart-button">New Game</button>
+  </div>
+  <p id="show-games"></p>
+  <div class="buttonCenter">
+    <button id="show-games-button">Show Games</button>
+  </div>
+
+  <div class="buttonCenter">
+    <button id="sign-out-button">Sign Out</button>
+  </div>
+  <form id="change-password-form">
+    <p>Change Password</p>
+    <input name="passwords[old]" type="password" placeholder="old password">
+    <input name="passwords[new]" type="password" placeholder="new password">
+    <input type="submit">
+  </form>
+  <footer>
+    <p>Email compliments to <a target="blank" href="mailto:rguempel@gmail.com">rguempel@gmail.com</a><br>
+      All complaints must be submitted in writing.</p>
+  </footer>
+</body>
+
+</html>
